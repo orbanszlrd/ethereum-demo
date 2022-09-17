@@ -1,12 +1,13 @@
 import './App.css';
-import Transactions from './components/Transactions';
-import TransferForm from './components/TransferForm';
+import Home from './components/Home';
+import { TransactionProvider } from './context/TransactionContext';
 
 const App = () => {
   return (
     <div className="App">
-      <TransferForm />
-      <Transactions />
+      <TransactionProvider>
+        <Home />
+      </TransactionProvider>
     </div>
   );
 };

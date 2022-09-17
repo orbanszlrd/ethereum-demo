@@ -1,9 +1,9 @@
-.transfer-from div {
-    margin: .8rem;
+.transaction-from div {
+    margin: .8rem auto;
     width: 24rem;
 }
 
-.transfer-from div input {
+.transaction-from input {
     margin: 0;
     padding: .8rem;
     border-radius: .4rem;
@@ -11,9 +11,20 @@
     background-color: silver;
     width: 100%;
     box-sizing: border-box;
+    outline: none;
 }
 
-.transfer-from div button {
+.transaction-from input:disabled {
+    color: whitesmoke;
+    background-color: #242424;
+    border-color: #343434;
+}
+
+.transaction-from input:focus {
+    background-color: white;
+}
+
+.transaction-from button {
     margin: 0;
     padding: .8rem;
     border-radius: .4rem;
@@ -26,8 +37,9 @@
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: .2rem;
+    outline: none;
 }
 
-.transfer-from div button:hover {
+.transaction-from button:hover {
     background-image: linear-gradient( 180deg, rgb(32, 128, 32), green);
 }

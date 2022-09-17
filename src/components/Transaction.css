@@ -1,0 +1,21 @@
+.transaction {
+    margin: 0;
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow: 2px 2px 16px #141414;
+    background-color: #343434;
+}
+
+.transaction div {
+    padding: .5rem 0;
+}
+
+.transaction a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.transaction a:hover {
+    color: white;
+    text-decoration: underline;
+}
