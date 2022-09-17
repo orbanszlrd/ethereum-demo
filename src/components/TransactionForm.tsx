@@ -10,7 +10,7 @@ const TransactionForm = () => {
     import.meta.env.VITE_RECEIVER_ADDRESS
   );
   const [amount, setAmount] = useState('0.001');
-  const [message, setMessage] = useState(`Message ${currentMilitaryTime()}`);
+  const [message, setMessage] = useState(`${currentMilitaryTime()}`);
 
   const { account, connectWallet, sendCrypto } = useContext(TransactionContext);
 

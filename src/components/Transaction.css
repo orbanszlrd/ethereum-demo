@@ -4,10 +4,17 @@
     border-radius: .5rem;
     box-shadow: 2px 2px 16px #141414;
     background-color: #343434;
+    font-size: 1rem;
 }
 
 .transaction div {
     padding: .5rem 0;
+}
+
+
+.transaction span:first-child {
+    display: inline-block;
+    width: 5rem;
 }
 
 .transaction a {

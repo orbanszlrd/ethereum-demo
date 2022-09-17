@@ -15,6 +15,11 @@ type EterscanLinkProps = {
 const EterscanLink = ({ network = 'goerli', address }: EterscanLinkProps) => {
   const baseUrl = `https://${network}.etherscan.io/address/`;
 
+  const shortAddress = address
+    .slice(0, 8)
+    .concat('...')
+    .concat(address.slice(-8));
+
   return (
     <a
       href={`${baseUrl}${address}`}
@@ -22,7 +27,7 @@ const EterscanLink = ({ network = 'goerli', address }: EterscanLinkProps) => {
       target="_blank"
       rel="noreferrer"
     >
-      {address}
+      {shortAddress}
     </a>
   );
 };
@@ -43,7 +48,9 @@ const Transaction = ({
       </div>
       <div>
         <span>Receiver: </span>
-        <EterscanLink address={receiver} />
+        <span>
+          <EterscanLink address={receiver} />
+        </span>
       </div>
       <div>
         <span>Amount: </span>
