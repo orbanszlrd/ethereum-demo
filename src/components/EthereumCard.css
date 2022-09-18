@@ -40,14 +40,21 @@
   box-shadow: 0 0 16px gray;
 }
 
-.ethereum-card .address {
+.ethereum-card .account,
+.ethereum-card .balance {
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 1rem;
+  bottom: 1rem;
   text-align: center;
   font-size: 0.7rem;
+  line-height: normal;
   color: gray;
   text-shadow: 2px 2px 16px #141414;
+}
+
+.ethereum-card .account {
+  left: 1rem;
+}
+
+.ethereum-card .balance {
+  right: 1rem;
 }

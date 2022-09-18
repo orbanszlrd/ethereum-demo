@@ -34,7 +34,7 @@
 
 .transaction .transaction-amount {
   padding: 0.5rem;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: orange;
   text-align: center;
   text-shadow: 2px 2px 16px #141414;
@@ -47,7 +47,7 @@
   transform: translate(-50%, -50%);
   width: 100%;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-shadow: 2px 2px 16px #141414;
 }
 

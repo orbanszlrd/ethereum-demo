@@ -12,6 +12,7 @@ type SendProps = {
 type TransactionContextType = {
   isLoading: boolean;
   account: string;
+  balance: string;
   transactions: any[];
   connectWallet: () => void;
   sendCrypto: ({ receiver, amount, message }: SendProps) => Promise<void>;
@@ -31,9 +32,11 @@ type TransactionProviderProps = { children: ReactNode };
 
 const { ethereum } = window as any;
 
+const provider = new ethers.providers.Web3Provider(ethereum);
+
 const createEthereumContract = () => {
-  const provider = new ethers.providers.Web3Provider(ethereum);
   const signer = provider.getSigner();
+
   const transactionsContract = new ethers.Contract(
     contractAddress,
     contractABI,
@@ -52,6 +55,7 @@ export const TransactionProvider: FunctionComponent<
 > = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [account, setAccount] = useState('');
+  const [balance, setBalance] = useState('0');
   const [transactions, setTransactions] = useState([] as TransactionType[]);
 
   const connectWallet = async () => {
@@ -65,6 +69,12 @@ export const TransactionProvider: FunctionComponent<
       });
 
       setAccount(accounts[0]);
+
+      const balance = ethers.utils.formatEther(
+        await provider.getBalance(accounts[0])
+      );
+
+      setBalance(balance);
 
       setTimeout(connectWallet, 1000);
     } catch (error) {
@@ -147,6 +157,7 @@ export const TransactionProvider: FunctionComponent<
         isLoading,
         connectWallet,
         account,
+        balance,
         transactions,
         sendCrypto,
         getAllTransactions,

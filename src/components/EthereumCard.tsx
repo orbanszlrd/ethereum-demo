@@ -4,7 +4,7 @@ import { TransactionContext } from '../context/TransactionContext';
 import './EthereumCard.css';
 
 const EthereumCard = () => {
-  const { account } = useContext(TransactionContext);
+  const { account, balance } = useContext(TransactionContext);
 
   return (
     <article className="ethereum-card">
@@ -12,7 +12,16 @@ const EthereumCard = () => {
       <div className="logo">
         <FaEthereum size={92} />
       </div>
-      <div className="address">Address: {account}</div>
+      {account && balance ? (
+        <>
+          <div className="account" title={account}>
+            Account: {account.slice(0, 5)}...{account.slice(-4)}
+          </div>
+          <div className="balance" title={balance}>
+            Balance: {balance.slice(0, 6)} ETH
+          </div>
+        </>
+      ) : null}
     </article>
   );
 };
