@@ -18,16 +18,24 @@ const Transactions = () => {
       {transactions && transactions.length > 0 && (
         <>
           <h3>Transactions</h3>
-          <div className="transactions-count">Count: {transactions.length}</div>
           <div className="transactions-grid">
             {transactions.map(
-              ({ id, sender, receiver, amount, message }: TransactionType) => (
+              ({
+                id,
+                sender,
+                receiver,
+                amount,
+                message,
+                timestamp,
+              }: TransactionType) => (
                 <Transaction
                   key={id}
+                  id={id}
                   sender={sender}
                   receiver={receiver}
                   amount={amount}
                   message={message}
+                  timestamp={timestamp}
                 />
               )
             )}

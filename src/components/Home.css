@@ -1,0 +1,12 @@
+.home > div:first-of-type {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 2rem auto;
+  max-width: 50rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .home div:first-of-type {
+    grid-template-columns: 1fr;
+  }
+}

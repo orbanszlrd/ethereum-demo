@@ -1,5 +1,4 @@
 import { useContext, useState } from 'react';
-import { FaEthereum } from 'react-icons/fa';
 import { TransactionContext } from '../context/TransactionContext';
 import { currentMilitaryTime } from '../utils/date-formatter';
 
@@ -21,22 +20,15 @@ const TransactionForm = () => {
 
   return (
     <article className="transaction-from">
-      <h3>
-        <span>Send Ether</span> <FaEthereum />
-      </h3>
-
       {account ? (
         <section>
-          <div>
-            <input value={account} disabled />
-          </div>
-
           <form onSubmit={sendEther}>
             <div>
               <input
                 type="text"
                 value={receiver}
                 placeholder="Receiver"
+                title="Receiver Address"
                 required
                 onInput={(e) => setReceiver(e.currentTarget.value)}
               />
@@ -48,6 +40,7 @@ const TransactionForm = () => {
                 step={'0.0001'}
                 value={amount}
                 placeholder="Amount"
+                title="Amount"
                 required
                 onInput={(e) => setAmount(e.currentTarget.value)}
               />
@@ -57,12 +50,13 @@ const TransactionForm = () => {
                 type="text"
                 value={message}
                 placeholder="Message"
+                title="Message"
                 required
                 onInput={(e) => setMessage(e.currentTarget.value)}
               />
             </div>
             <div>
-              <button type="submit">Send</button>
+              <button type="submit">Send Ether</button>
             </div>
           </form>
         </section>

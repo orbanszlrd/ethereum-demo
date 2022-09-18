@@ -1,28 +1,68 @@
 .transaction {
-    margin: 0;
-    padding: 2rem;
-    border-radius: .5rem;
-    box-shadow: 2px 2px 16px #141414;
-    background-color: #343434;
-    font-size: 1rem;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 24rem;
+  height: 8rem;
+  border-radius: 0.5rem;
+  border: 1px solid #343434;
+  box-shadow: 2px 2px 16px #141414;
+  background-image: linear-gradient(180deg, #343434, #242424);
+  font-size: 1rem;
 }
 
 .transaction div {
-    padding: .5rem 0;
-}
-
-
-.transaction span:first-child {
-    display: inline-block;
-    width: 5rem;
+  padding: 0.3rem 0;
 }
 
 .transaction a {
-    color: whitesmoke;
-    text-decoration: none;
+  color: whitesmoke;
+  text-decoration: none;
 }
 
 .transaction a:hover {
-    color: white;
-    text-decoration: underline;
+  color: white;
+  text-decoration: underline;
+}
+
+.transaction .transaction-id {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.5rem;
+}
+
+.transaction .transaction-amount {
+  padding: 0.5rem;
+  font-size: 1.4rem;
+  color: orange;
+  text-align: center;
+  text-shadow: 2px 2px 16px #141414;
+}
+
+.transaction .transaction-parties {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  text-shadow: 2px 2px 16px #141414;
+}
+
+.transaction .transaction-timestamp {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: gray;
+  text-shadow: 2px 2px 16px #141414;
+}
+
+.transaction svg {
+  margin: 0 1rem;
 }

@@ -7,20 +7,21 @@
   color: rgba(255, 255, 255, 0.87);
 
   background-color: #242424;
+}
 
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0 auto;
   display: flex;
   min-height: 100vh;
-
-  box-sizing: border-box;
 }
 
 h3 {
   font-size: 1.4rem;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   text-transform: uppercase;
   text-align: center;
   font-weight: lighter;
@@ -34,6 +35,7 @@ h3 svg {
   vertical-align: middle;
 }
 
-input, button {
+input,
+button {
   font-size: 0.9rem;
 }

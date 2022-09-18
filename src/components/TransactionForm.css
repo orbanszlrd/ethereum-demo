@@ -1,45 +1,49 @@
+.transaction-from {
+  margin: 0;
+  padding: 0;
+}
+
 .transaction-from div {
-    margin: .8rem auto;
-    width: 24rem;
+  margin: 0.8rem auto;
+  margin-top: 0;
+  width: 24rem;
 }
 
 .transaction-from input {
-    margin: 0;
-    padding: .8rem;
-    border-radius: .4rem;
-    border: 1px solid whitesmoke;
-    background-color: silver;
-    width: 100%;
-    box-sizing: border-box;
-    outline: none;
+  margin: 0;
+  padding: 0.8rem;
+  border-radius: 0.4rem;
+  border: 1px solid whitesmoke;
+  background-color: silver;
+  width: 100%;
+  outline: none;
 }
 
 .transaction-from input:disabled {
-    color: whitesmoke;
-    background-color: #242424;
-    border-color: #343434;
+  color: whitesmoke;
+  background-color: #242424;
+  border-color: #343434;
 }
 
 .transaction-from input:focus {
-    background-color: white;
+  background-color: white;
 }
 
 .transaction-from button {
-    margin: 0;
-    padding: .8rem;
-    border-radius: .4rem;
-    background-image: linear-gradient( 180deg, green, darkgreen);
-    border: 1px solid whitesmoke;
-    color: whitesmoke;
-    width: 100%;
-    box-sizing: border-box;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: .2rem;
-    outline: none;
+  margin: 0;
+  padding: 0.8rem;
+  border-radius: 0.4rem;
+  background-image: linear-gradient(180deg, green, darkgreen);
+  border: 1px solid whitesmoke;
+  color: whitesmoke;
+  width: 100%;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  outline: none;
 }
 
 .transaction-from button:hover {
-    background-image: linear-gradient( 180deg, rgb(32, 128, 32), green);
+  background-image: linear-gradient(180deg, rgb(32, 128, 32), green);
 }

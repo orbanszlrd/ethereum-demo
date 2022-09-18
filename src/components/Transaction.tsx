@@ -1,10 +1,13 @@
+import { FaLongArrowAltRight } from 'react-icons/fa';
 import './Transaction.css';
 
 export type TransactionProps = {
+  id: number;
   sender: string;
   receiver: string;
   amount: number;
   message: string;
+  timestamp: string;
 };
 
 type EterscanLinkProps = {
@@ -16,9 +19,9 @@ const EterscanLink = ({ network = 'goerli', address }: EterscanLinkProps) => {
   const baseUrl = `https://${network}.etherscan.io/address/`;
 
   const shortAddress = address
-    .slice(0, 8)
+    .slice(0, 5)
     .concat('...')
-    .concat(address.slice(-8));
+    .concat(address.slice(-4));
 
   return (
     <a
@@ -33,34 +36,32 @@ const EterscanLink = ({ network = 'goerli', address }: EterscanLinkProps) => {
 };
 
 const Transaction = ({
+  id,
   sender,
   receiver,
   amount,
   message,
+  timestamp,
 }: TransactionProps) => {
   return (
     <article className="transaction">
-      <div>
-        <span>Sender: </span>
+      <div className="transaction-id">{id}</div>
+      <div className="transaction-amount">
+        <span>{amount} ETH</span>
+      </div>
+      <div className="transaction-parties">
         <span>
           <EterscanLink address={sender} />
         </span>
-      </div>
-      <div>
-        <span>Receiver: </span>
+        <span>
+          <FaLongArrowAltRight />
+        </span>
         <span>
           <EterscanLink address={receiver} />
         </span>
       </div>
-      <div>
-        <span>Amount: </span>
-        <span style={{ color: 'orange', fontWeight: 'normal' }}>
-          {amount} Ether
-        </span>
-      </div>
-      <div>
-        <span>Message: </span>
-        <span>{message}</span>
+      <div className="transaction-timestamp">
+        <span>{timestamp}</span>
       </div>
     </article>
   );
