@@ -32,9 +32,8 @@ type TransactionProviderProps = { children: ReactNode };
 
 const { ethereum } = window as any;
 
-const provider = new ethers.providers.Web3Provider(ethereum);
-
 const createEthereumContract = () => {
+  const provider = new ethers.providers.Web3Provider(ethereum);
   const signer = provider.getSigner();
 
   const transactionsContract = new ethers.Contract(
@@ -69,6 +68,8 @@ export const TransactionProvider: FunctionComponent<
       });
 
       setAccount(accounts[0]);
+
+      const provider = new ethers.providers.Web3Provider(ethereum);
 
       const balance = ethers.utils.formatEther(
         await provider.getBalance(accounts[0])
