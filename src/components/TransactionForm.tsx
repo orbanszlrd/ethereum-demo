@@ -8,7 +8,7 @@ const TransactionForm = () => {
   const [receiver, setReceiver] = useState(
     import.meta.env.VITE_RECEIVER_ADDRESS
   );
-  const [amount, setAmount] = useState('0.001');
+  const [amount, setAmount] = useState('0.1');
   const [message, setMessage] = useState(`${currentMilitaryTime()}`);
 
   const { account, connectWallet, sendCrypto } = useContext(TransactionContext);
@@ -36,8 +36,8 @@ const TransactionForm = () => {
             <div>
               <input
                 type="number"
-                min={'0.0001'}
-                step={'0.0001'}
+                min={'0.01'}
+                step={'0.01'}
                 value={amount}
                 placeholder="Amount"
                 title="Amount"

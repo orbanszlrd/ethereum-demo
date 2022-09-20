@@ -1,5 +1,6 @@
 .transactions {
-  margin: 2rem;
+  margin: 0 auto;
+  width: 102rem;
 }
 
 .transactions-grid {
@@ -9,18 +10,30 @@
 }
 
 @media screen and (max-width: 1919px) {
+  .transactions {
+    width: 76rem;
+  }
+
   .transactions-grid {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
 @media screen and (max-width: 1279px) {
+  .transactions {
+    width: 50rem;
+  }
+
   .transactions-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media screen and (max-width: 1023px) {
+  .transactions {
+    width: 24rem;
+  }
+
   .transactions-grid {
     grid-template-columns: 1fr;
   }
