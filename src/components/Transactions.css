@@ -1,5 +1,5 @@
 .transactions {
-  margin: 0 auto;
+  margin: 2rem auto;
   width: 102rem;
 }
 
@@ -36,5 +36,11 @@
 
   .transactions-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .transactions {
+    width: 20rem;
   }
 }

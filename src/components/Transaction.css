@@ -66,3 +66,9 @@
 .transaction svg {
   margin: 0 1rem;
 }
+
+@media screen and (max-width: 540px) {
+  .transaction {
+    width: 20rem;
+  }
+}

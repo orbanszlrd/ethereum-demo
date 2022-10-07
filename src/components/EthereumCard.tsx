@@ -10,7 +10,7 @@ const EthereumCard = () => {
     <article className="ethereum-card">
       <h3>Ethereum</h3>
       <div className="logo">
-        <FaEthereum size={92} />
+        <FaEthereum />
       </div>
       {account && balance ? (
         <>

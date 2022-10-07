@@ -38,6 +38,7 @@
   border: 1px solid silver;
   border-radius: 50%;
   box-shadow: 0 0 16px gray;
+  font-size: 92px;
 }
 
 .ethereum-card .account,
@@ -57,4 +58,19 @@
 
 .ethereum-card .balance {
   right: 1rem;
+}
+
+@media screen and (max-width: 540px) {
+  .ethereum-card {
+    width: 20rem;
+    height: 11rem;
+  }
+
+  .ethereum-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .ethereum-card .logo svg {
+    font-size: 64px;
+  }
 }

@@ -47,3 +47,9 @@
 .transaction-from button:hover {
   background-image: linear-gradient(180deg, rgb(32, 128, 32), green);
 }
+
+@media screen and (max-width: 540px) {
+  .transaction-from div {
+    width: 20rem;
+  }
+}
